@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pablalva <pablalva@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/10 11:35:54 by pablalva          #+#    #+#             */
-/*   Updated: 2025/09/11 16:43:16 by pablalva         ###   ########.fr       */
+/*   Created: 2025/09/10 18:28:48 by pablalva          #+#    #+#             */
+/*   Updated: 2025/09/11 16:42:23 by pablalva         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
-# include <iostream>
-# include <string>
+#include"Fixed.hpp"
+#include"Point.hpp"
 
-class Fixed
+bool bsp( Point const a, Point const b, Point const c, Point const point);
+
+int main(void)
 {
-private:
-	int fixed_point;
-	static const int n_frac_bits = 8;
-public:
-	Fixed();
-	~Fixed();
-	Fixed(const Fixed& other);
-	Fixed& operator=(Fixed& other);
-	int getRawBits( void ) const;
-	void setRawBits( int const raw );
-};
-#endif
+	Point const a;
+	Point const b(4,0);
+	Point const c(0,3);
+	Point const comprove(1,1);
+	bsp(a,b,c,comprove);
+	return(0);
+}
